@@ -9,7 +9,8 @@ module.exports = {
     filename: './bundle.js'
   },
   devServer: {
-    contentBase: './public'
+    contentBase: './public',
+    historyApiFallback: true,
   },
   devtool: 'source-map',
   module: {
