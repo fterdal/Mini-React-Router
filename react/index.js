@@ -1,19 +1,36 @@
 import React from 'react'
 import { render } from 'react-dom'
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link,
+} from 'react-router-dom'
+
+const Home = () => (
+  <h2>Home</h2>
+)
+
+const Work = () => (
+  <h2>Work</h2>
+)
 
 const App = () => (
   <div>
     <h1>Hello from React!</h1>
-    <p>Riddle: We come at night without being fetched; we disappear by day without being stolen. What are we?</p>
-    <p style={{fontStyle: 'italic'}}>Pop open the developer tools to see the answer.</p>
+    <Router>
+      <div>
+        <Link to="/">Home</Link>
+        <br />
+        <Link to="/work">Work</Link>
+        <Switch>
+          <Route path="/work" component={Work} />
+          <Route path="/" component={Home} />
+        </Switch>
+      </div>
+    </Router>
   </div>
 )
-
-console.log(`Answer:
-✨ ✨ ✨ ✨ ✨ ✨ ✨ ✨ 
-✨ ✨ ✨ Stars ✨ ✨ ✨
-✨ ✨ ✨ ✨ ✨ ✨ ✨ ✨ 
-`)
 
 render(
   <App />,

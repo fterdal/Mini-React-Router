@@ -1,7 +1,7 @@
 {
-  "name": "Mini-React",
+  "name": "Mini-React-Router",
   "version": "1.0.0",
-  "description": "A Very Minimal React Configuration",
+  "description": "A Very Minimal React Configuration (with react-router)",
   "main": "react/index.js",
   "scripts": {
     "build-watch": "webpack -w",
@@ -19,7 +19,8 @@
   },
   "dependencies": {
     "react": "^16.3.2",
-    "react-dom": "^16.3.2"
+    "react-dom": "^16.3.2",
+    "react-router-dom": "^4.2.2"
   },
   "devDependencies": {
     "babel-core": "^6.26.3",
